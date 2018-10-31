@@ -1,10 +1,13 @@
 
+The purpose of any version control system is to record changes to your code. This gives you the power to go back into your project history to see who contributed what, figure out where bugs were introduced, and revert problematic changes.
 
 GIT : Distributed revision-control system.
 
-Git is a peice of software that does version control. It is only installed locally on any machine (Linux, Win, Mac). 
+Git is a piece of software that does version control. It is only installed locally on any machine (Linux, Win, Mac). 
 GitHub, BitBucket etc. are web based implementation of Git, developed by different companies. They function similar to git. They very well support syncing of project between their individual web application and locally installed Git.
-Note: I would be using GitHub remote (online) repository.
+
+Note: Notes are articulated using GitHub repository.
+
 
 
 Features of Git:
@@ -14,69 +17,111 @@ Test changes to code without losing original.
 Revert back to older version of code.
 
 
-Learning GIT can be started in 2 ways:
-By creating a local git repository.
-By cloning a remote (online) repository to local machine. [Online Repo: GitHub, BitBucket, Company's Own Server, AWS, etc.]
+Let's begin Git journey!
 
-** Recommended to start with 1st way. This will help you to clearly distinguish between Git & GitHub.
+Step 1: Install Git. [Refer Git website]
 
+---x---
 
-Learning Git by creating local Git repository:
+Step 2: Configure your Git credentials [git config - username and email]. 
 
-Step 1: Install Git.
+Execute below commands in Git Bash, by editing the necessary details:
 
-Step 2: Configure Git.
-Here you configure your Git credentials. 
+git config –global user.name “[name]”                 --> This command sets the author name that is used identify individual's commits.
+Ex. git config –global user.name “anand” 
 
-git config : This command sets the author name and email address respectively to be used with your commits. Execute below commands in Git Bash, by editing the necessary details:
+git config –global user.email “[email address]”       --> This command sets the email address that is used identify individual's commits.
+Ex. git config –global user.email “anand@gmail.com”
 
-git config –global user.name “[name]” 
- 
-git config –global user.email “[email address]”  
+---x---
 
-
-Step 3: Create a Git reposity.
-git init : This command is used to create a git repository.
+Step 3: Create a Git repository [git init].
 
 Three ways:- 
 
-a] To create a new repository using Git Bash: 
+a] Creating new Git repository using Git Bash: 
 In Git Bash, navigate to the directory location where you want to create a git repository and execute following command
 
 git init [repository name] 
-
 Ex. git init new-repo
 
 This will create a new repository 'new-repo' on the drive location where you execute the command.
+                 
 
-
-b] Create a repo of an existing project folder:
+b] Make existing project folder as a Git repository:
 In GIT Bash, navigate to your project folder [Using 'cd' command]. Run 'git init' command.
 Another way to do this is right click on project folder and select 'Git Bash Here' option. Run 'git init' command.
 
 This will add your project folder to local git repository. 
 
 
-c] Cloning a repository from a remote server [Online Repo: GitHub, BitBucket, Company's Own Server, AWS, etc.]
+c] Cloning a repository from a remote server [Ex. GitHub, BitBucket, Company's Own Server, AWS, etc.]
 In Git Bash, navigate to the directory location where you want to make a copy of remote git repository, locally using it's URL.
 
 git clone [url]
+Ex. git clone https://github.com/devops-anand/GIT-GITHUB-Notes.git
+
+
+---x---
+
+Step 4: Playing with repository [Create, Edit, Delete Files in repository.]
+
+---x---
+
+Step 5: Adding the changes to the staging area. 
+- Whatever changes you have made to the repository in Step 4, are to be added to the staging area 
+
+git add [filename.extn]         --> This command adds a specified file to the staging area.
+Ex. git add File1.txt
+
+git add *                       --> This command adds all applicable files to the staging area.
+
+---x---
+
+Step 6: Committing the snapshot(s) of the file(s) to version history. 
+Means to save a copy to version history records which is kind of a benchmark. This benchmark specifies the point at which changes can be reverted.
+This command commits only those file(s) that are present in staging area.
+
+git commit -m “[ Type in the commit message]”     --> This command commits all file(s) present in staging area.
+
+
+Now if you want to directly commit any files i.e. by omitting the Step 5 , then use below command:
+
+git commit -am “[ Type in the commit message]”
+
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+---x---
+
+Till now we have seen a basic setup & working in Git repository:  setting up Git repository, playing with files, saving the changes of repository to version history (i.e. Committing). Now we will look at some other helpful Git commands:
+
+
+git status : Inspecting a repository. The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. This command lists all the files that have to be committed.
+
+
+git log  : The basic git log command for displaying commits. It list the version history for the current branch.
+
+
+git reset [file] : The git reset command is a complex and versatile tool for undoing changes. It has three primary forms of invocation. These forms correspond to command line arguments --soft, --mixed, --hard. The three arguments each correspond to Git's three internal state management mechanism's, The Commit Tree (HEAD), The Staging Index, and The Working Directory. The git reset command is a complex and versatile tool for undoing changes. This command un-stages the file, but it preserves the file contents.
+
+
+git show [commit]  : This command shows the metadata and content changes of the specified commit.
+
+
+git diff  : Shows the changes between the working directory and the index. This shows what has been changed, but is not staged for a commit.
+
+
+git diff --cached  : Shows the changes between the index and the HEAD (which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
+
+
+git diff HEAD  : Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
+
+
+git rm : The git rm command can be used to remove individual files or a collection of files. The primary function of git rm is to remove tracked files from the Git index. Additionally, git rm can be used to remove files from both the staging index and the working directory. There is no option to remove a file from only the working directory. The files being operated on must be identical to the files in the current HEAD. If there is a discrepancy between the HEAD version of a file and the staging index or working tree version, Git will block the removal. This block is a safety mechanism to prevent removal of in-progress changes.
+
+---x---
 
 
 
-Step 4: Playing with repository. 
-
-Create, Edit, Delete Files in repository.
-
-
-
-Step 5: Adding the changes to the staging area.
-
-git add [file]  : This command adds a specified file to the staging area.
-
-git add *  : This command adds all applicable files to the staging area.
-
-
-
-
+Added this line after creation of Test branch.
 
