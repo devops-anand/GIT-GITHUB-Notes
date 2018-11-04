@@ -2,15 +2,8 @@
 
 In the following project my aim is to collaborate all useful git & github resources under one umbrella in short and precise way. This would be represented in form of ref links & notes from various sources.
 
-#Topics (Beginners):
-Process of learning Git.
-GIT - Understanding & Using.
-How to use use GitHub.
-Understanding the GitHub flow (https://guides.github.com/introduction/flow/)
-How to sync project between Git & GitHub.
 
-
-#Topics :
+# GIT Topics :
 
 
 #Setup and Config
@@ -55,8 +48,10 @@ shortlog
 describe
 
 
+# GitHub Topics :
 
-
+Understanding the GitHub flow (https://guides.github.com/introduction/flow/)
+How to sync project between Git & GitHub.
 
 References:
 https://dzone.com/articles/top-20-git-commands-with-examples

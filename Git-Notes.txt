@@ -144,12 +144,11 @@ git rm : The git rm command can be used to remove individual files or a collecti
 ---x---
 
 
-Revise above content and then we will start with GitHub from here.
+Next Step: This is still under revision. Suggestions welcome. 
+
+after final revision of GIT will start with GitHub.
 
 
-From Branch1
-
-From Branch2
 
 
 
