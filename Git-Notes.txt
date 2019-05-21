@@ -23,15 +23,18 @@ Step 1: Install Git. [Refer Git website]
 
 ---x---
 
-Step 2: Configure your Git credentials [git config - username and email]. 
+Step 2: Configure your Git credentials [git config - user.name and user.email]. 
 
 Execute below commands in Git Bash, by editing the necessary details:
 
-git config –global user.name “[name]”                 --> This command sets the author name that is used identify individual's commits.
+git config –global user.name “[name]”      / This command sets the author name that is used identify individual's commits.
 Ex. git config –global user.name “anand” 
 
-git config –global user.email “[email address]”       --> This command sets the email address that is used identify individual's commits.
+git config –global user.email “[email address]”    / This command sets the email address that is used identify individual's commits.
 Ex. git config –global user.email “anand@gmail.com”
+
+We can use -local to explicitly set username & email for any particular repository.
+
 
 ---x---
 
