@@ -1,12 +1,4 @@
-Git Configuration
-For the initial configuration of username, email, and code highlighting (optional):
-$git config -- global user.name”firstname lastname”
-$git config -- global user.email” abc123@abc.com”
 
-$git config --list
-
-Initializing Git
-$git init
 
 To know the status:
 $git status
@@ -45,8 +37,7 @@ $git push -u origin master
 
 
 
-Scenario-based commands:
-
+#Scenario-based commands:
 
 1] To check local repository sync status with remote repository. Means to know how can we make sure that our local repository has all the latest updates that are commited by different developers at given instance. 
 

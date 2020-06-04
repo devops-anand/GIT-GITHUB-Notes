@@ -1,29 +1,7 @@
 
-The purpose of any version control system is to record changes to your code. This gives you the power to go back into your project history to see who contributed what, figure out where bugs were introduced, and revert problematic changes.
-
-GIT : Distributed revision-control system.
-
-Git is a piece of software that does version control. It is only installed locally on any machine (Linux, Win, Mac). 
-GitHub, BitBucket etc. are web based implementation of Git, developed by different companies. They function similar to git. They very well support syncing of project between their individual web application and locally installed Git.
-
-Note: Notes are articulated using GitHub repository.
 
 
-
-Features of Git:
-Keeps track of changes to the code.
-Synchronize code between different people.
-Test changes to code without losing original.
-Revert back to older version of code.
-
-
-Let's begin Git journey!
-
-Step 1: Install Git. [Refer Git website]
-
----x---
-
-Step 2: Configure your Git credentials [git config - user.name and user.email]. 
+Step 1: Configure your Git credentials [git config - user.name and user.email]. 
 
 Execute below commands in Git Bash, by editing the necessary details:
 
@@ -35,10 +13,11 @@ Ex. git config –global user.email “anand@gmail.com”
 
 We can use -local to explicitly set username & email for any particular repository.
 
+$git config --list
 
 ---x---
 
-Step 3: Create a Git repository [git init].
+Step 2: Create a Git repository [git init].
 
 Three ways:- 
 
@@ -67,11 +46,11 @@ Ex. git clone https://github.com/devops-anand/GIT-GITHUB-Notes.git
 
 ---x---
 
-Step 4: Create, Edit File(s) in repository.
+Step 3: Create, Edit File(s) in repository.
 
 ---x---
 
-Step 5: Adding the changes to the staging area. 
+Step 4: Adding the changes to the staging area. 
 - Whatever changes you have made to the repository in Step 4, are to be added to the staging area 
 
 git add [filename.extn]         --> This command adds a specified file to the staging area.
@@ -82,7 +61,7 @@ git add .      --> All modified files are staged.
 
 ---x---
 
-Step 6: Committing the snapshot(s) of the file(s) to version history. 
+Step 5: Committing the snapshot(s) of the file(s) to version history. 
 Means to save a copy to version history records which is kind of a benchmark. This benchmark specifies the point at which changes can be reverted.
 This command commits only those file(s) that are present in staging area.
 

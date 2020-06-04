@@ -1,1 +1,6 @@
-*.log
+#Ignore all .log files from entire project directory
+#*.log
+
+#Ignore all .log files from specific project folder directory
+Logs/*.log
+#or yo can just mention - Logs/
