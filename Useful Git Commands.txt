@@ -1,6 +1,51 @@
+Git Configuration
+For the initial configuration of username, email, and code highlighting (optional):
+$git config -- global user.name”firstname lastname”
+$git config -- global user.email” abc123@abc.com”
+
+$git config --list
+
+Initializing Git
+$git init
+
+To know the status:
+$git status
+
+Adding and Removing Files
+
+To add a file:
+$git add<filename>
+
+To add multiple files:
+$git add<filename> <2nd filename> <3rd filename>
+
+To add all the updated files:
+$git add --all ( use -A instead of -all too )
+
+To remove files:
+$git rm -r <filename>
 
 
-#Topic: Useful Git Commands
+Committing Changes
+
+To pass a message, use ‘commit’ with ‘-m’:
+$git commit -m “body_of_message”
+
+To amend the last commit or the last message:
+$git commit --amend -m “new_message”
+
+
+Pushing and Pulling
+
+To add remote repository:
+$git remote add origin<link>
+
+To push files:
+$git push -u origin master
+
+
+
+Scenario-based commands:
 
 
 1] To check local repository sync status with remote repository. Means to know how can we make sure that our local repository has all the latest updates that are commited by different developers at given instance. 
