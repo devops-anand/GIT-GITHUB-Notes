@@ -67,7 +67,7 @@ Ex. git clone https://github.com/devops-anand/GIT-GITHUB-Notes.git
 
 ---x---
 
-Step 4: Playing with repository [Create, Edit, Delete Files in repository.]
+Step 4: Create, Edit File(s) in repository.
 
 ---x---
 
@@ -77,7 +77,8 @@ Step 5: Adding the changes to the staging area.
 git add [filename.extn]         --> This command adds a specified file to the staging area.
 Ex. git add File1.txt
 
-git add *                       --> This command adds all applicable files to the staging area.
+git add *                      --> This command adds all applicable files to the staging area.
+git add .      --> All modified files are staged.
 
 ---x---
 
@@ -87,8 +88,9 @@ This command commits only those file(s) that are present in staging area.
 
 git commit -m “[ Type in the commit message]”     --> This command commits all file(s) present in staging area.
 
+git commit .\cypress\integration\WebElements\CheckBox.js -m "Testing single file commit"        --> Commits single file
 
-Now if you want to directly commit any files i.e. by omitting the Step 5 , then use below command:
+Now if you want to directly commit any files i.e. by omitting the Step 5 (Staging) , then use below command:
 
 git commit -am “[ Type in the commit message]”
 
