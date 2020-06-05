@@ -4,3 +4,4 @@
 #Ignore all .log files from specific project folder directory
 Logs/*.log
 #or yo can just mention - Logs/
+Git-Notes.txt

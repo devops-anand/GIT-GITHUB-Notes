@@ -131,14 +131,7 @@ git branch -d [branch-name] : To delete the branch after merging.
 
 ---x---
 
-Till now we have seen a basic setup & working in Git repository:  setting up Git repository, playing with files, saving the changes of repository to version history (i.e. Committing). Now we will look at some other helpful Git commands:
 
-
-
-
-Next Step: This is still under revision. Suggestions welcome. 
-
-after final revision of GIT will start with GitHub.
 
 
 
