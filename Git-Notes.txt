@@ -98,7 +98,7 @@ git show [commit]  : This command shows the meta-data and content changes of the
 git diff  : Compares working directory to staging area. This shows what has been changed, but is not staged for a commit.
 
 git diff --staged: Compares staging area to last commit.
-
+or [similar]
 git diff --cached  : Shows the changes between the index and the HEAD (which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
 
 git diff HEAD  : Compares working directory to local Repo. Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
