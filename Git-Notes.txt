@@ -1,0 +1,151 @@
+
+
+
+Step 1: Configure your Git credentials [git config - user.name and user.email]. 
+
+Execute below commands in Git Bash, by editing the necessary details:
+
+git config –global user.name “[name]”      / This command sets the author name that is used identify individual's commits.
+Ex. git config –global user.name “anand” 
+
+git config –global user.email “[email address]”    / This command sets the email address that is used identify individual's commits.
+Ex. git config –global user.email “anand@gmail.com”
+
+We can use -local to explicitly set username & email for any particular repository.
+
+$git config --list
+
+/***************************************************************************************************************************************/
+
+Step 2: Create a Git repository [git init].
+
+Three ways:- 
+
+a] Creating new Git repository using Git Bash: 
+In Git Bash, navigate to the directory location where you want to create a git repository and execute following command
+
+git init [repository name] 
+Ex. git init new-repo
+
+This will create a new repository 'new-repo' on the drive location where you execute the command.
+                 
+
+b] Make existing project folder as a Git repository:
+In GIT Bash, navigate to your project folder [Using 'cd' command]. Run 'git init' command.
+Another way to do this is right click on project folder and select 'Git Bash Here' option. Run 'git init' command.
+
+This will add your project folder to local git repository. 
+
+
+c] Cloning a repository from a remote server [Ex. GitHub, BitBucket, Company's Own Server, AWS, etc.]
+In Git Bash, navigate to the directory location where you want to make a copy of remote git repository, locally using it's URL.
+
+git clone [url]
+Ex. git clone https://github.com/devops-anand/GIT-GITHUB-Notes.git
+
+
+/***************************************************************************************************************************************/
+
+Step 3: Create, Edit File(s) in repository.
+
+Exercise:
+Create sample.txt
+Add some content to it & save.
+
+/***************************************************************************************************************************************/
+
+Step 4: Adding the changes to the staging area. 
+- Whatever changes you have made to the repository in Step 3, are to be added to the staging area 
+
+git add [filename.extn]         --> This command adds a specified file to the staging area.
+Ex. git add sample.txt
+
+git add *                      --> This command adds all applicable files to the staging area.
+git add .      --> All modified files are staged.
+
+
+After adding run command: git status
+
+/***************************************************************************************************************************************/
+
+Step 5: Committing the snapshot(s) of the file(s) to version history. [Means - Commit to local repository]
+To save a copy to version history records which is kind of a benchmark. This benchmark specifies the point at which changes can be reverted.
+This command commits only those file(s) that are present in Staging area.
+
+git commit -m “[ Type in the commit message]”     --> This command commits all file(s) present in staging area.
+
+git commit .\cypress\integration\WebElements\CheckBox.js -m "Testing single file commit"        --> Commits single file
+
+Now if you want to directly commit any files i.e. by omitting the Step 5 (Staging) , then use below command:
+
+git commit -am “[ Type in the commit message]”
+
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+After adding run command: git status
+
+/***************************************************************************************************************************************/
+
+Git Commands to check the status & differences in files in working/staged/localRepo. Refer the Git-Working.png while reading this for easy understanding.
+
+
+git status : Inspecting a repository. The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven’t, and which files aren’t being tracked by Git. This command lists all the files that have to be committed.
+
+git log  : The basic git log command for displaying commits. It list the version history for the current branch.
+
+git show [commit]  : This command shows the meta-data and content changes of the specified commit.
+
+git diff  : Compares working directory to staging area. This shows what has been changed, but is not staged for a commit.
+
+git diff --staged: Compares staging area to last commit.
+or [similar]
+git diff --cached  : Shows the changes between the index and the HEAD (which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
+
+git diff HEAD  : Compares working directory to local Repo. Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
+
+git rm : The git rm command can be used to remove individual files or a collection of files. The primary function of git rm is to remove tracked files from the Git index. Additionally, git rm can be used to remove files from both the staging index and the working directory. There is no option to remove a file from only the working directory. The files being operated on must be identical to the files in the current HEAD. If there is a discrepancy between the HEAD version of a file and the staging index or working tree version, Git will block the removal. This block is a safety mechanism to prevent removal of in-progress changes.
+
+git rm --cached: Will stop tracking file. Suppose you were working on test.db file and it was been tracked earlier. Now you put it in gitignore & commit gitignore. When you make changes it will still be showing the changes are not staged. TO overcome this problem use git rm --cached
+
+git reset [file] : The git reset command is a complex and versatile tool for undoing changes. It has three primary forms of invocation. These forms correspond to command line arguments --soft, --mixed, --hard. The three arguments each correspond to Git's three internal state management mechanism's, The Commit Tree (HEAD), The Staging Index, and The Working Directory. The git reset command is a complex and versatile tool for undoing changes. This command un-stages the file, but it preserves the file contents.
+
+/***************************************************************************************************************************************/
+
+#Branching:
+
+Now let's take a small advance step. We will do branching:
+
+Branching: Branch is the version of repository. Each branch has its own commit history and current version.
+
+git branch : Shows all the branches of code
+
+git branch [branch-name]  : Create a new branch
+
+git checkout [branch-name] : Switch to the selected branch (branch-name).
+
+To perform above 2 things together in single step, you can directly use : git checkout -b [branch-name]
+
+git merge [branch-name] : This command merges the specified branch’s history into the current branch. i.e. it merges the branch-name with the current branch on which I am on.
+
+
+git branch -d [branch-name] : To delete the branch after merging.
+
+
+
+/***************************************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
