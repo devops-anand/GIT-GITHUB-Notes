@@ -118,7 +118,7 @@ git branch : Shows all the branches of code.
 
 git branch [branch-name]  : Create a new branch.
 
-git checkout [branch-name] : Switch to the selected branch (branch-name).
+git checkout ---[branch-name] : Switch to the selected branch (branch-name).
 
 git checkout -b [branch-name] : To perform above 2 things together in single step. 
 
