@@ -123,7 +123,9 @@ git branch [branch-name]  : Create a new branch
 
 git checkout [branch-name] : Switch to the selected branch (branch-name).
 
-To perform above 2 things together in single step, you can directly use : git checkout -b [branch-name]
+git checkout -b [branch-name] : To perform above 2 things together in single step
+
+
 
 git merge [branch-name] : This command merges the specified branch’s history into the current branch. i.e. it merges the branch-name with the current branch on which I am on.
 
