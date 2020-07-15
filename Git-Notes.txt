@@ -129,7 +129,12 @@ git branch -d [branch-name] : To delete the branch after merging.
 
 /***************************************************************************************************************************************/
 
+Git Ignore (.gitignore):
 
+*.log  -> Ignore all .log files from entire project directory
+
+Logs/*.log  -> Ignore all .log files from specific project folder directory.
+               or yo can just mention - Logs/
 
 
 
